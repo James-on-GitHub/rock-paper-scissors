@@ -26,10 +26,29 @@ let humanScore = 0;
 let computerSore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+const dualSelection = humanSelection && computerSelection;
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-        console.log(`It's a draw. No one wins.`)
+        console.log(`It's a draw! You both chose ${dualSelection}.`);
+    } 
+    else if (humanChoice === "Rock" && computerChoice === "Paper") {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+    } 
+    else if (humanChoice === "Rock" && computerChoice === "Scissors") {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+    } 
+    else if (humanChoice === "Paper" && computerChoice === "Rock") {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+    } 
+    else if (humanChoice === "Paper" && computerChoice === "Scissors") {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+    }
+    else if (humanChoice === "Scissors" && computerChoice === "Rock") {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+    }
+    else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
     }
 }
 
