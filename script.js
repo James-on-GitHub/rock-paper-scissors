@@ -4,3 +4,9 @@ function getComputerChoice() {
     let choice = option[Math.floor(Math.random() * option.length)];
     return choice;
 }
+
+// Human choice: return user input.
+function getHumanChoice() {
+    let choice = prompt("Type Rock, Paper or Scissors:");
+    return choice;
+}
