@@ -10,15 +10,15 @@ function getHumanChoice() {
     let options = "Rock, Paper or Scissors."
     let choice = prompt("Type Rock, Paper or Scissors:");
     if (choice === "Rock") {
-        return choice;
+        console.log(`You chose ${choice}.`);
     } else if (choice === "Paper") {
-        return choice;
+        console.log(`You chose ${choice}.`);
     } else if (choice === "Scissors") {
-        return choice;
+        console.log(`You chose ${choice}.`);
     } else {
         alert(`Please enter ${options}`);
     }
 }
-
+getHumanChoice();
 let humanScore = 0;
 let computerSore = 0;
