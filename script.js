@@ -19,3 +19,6 @@ function getHumanChoice() {
         alert(`Please enter ${options}`);
     }
 }
+
+let humanScore = 0;
+let computerSore = 0;
