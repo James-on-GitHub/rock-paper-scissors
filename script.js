@@ -3,6 +3,7 @@ function getComputerChoice() {
     let options = ["Rock", "Paper", "Scissors"];
     let choice = options[Math.floor(Math.random() * options.length)];
     console.log(`The computer chose ${choice}.`);
+    return choice;
 }
 
 // Human choice: return user input.
@@ -18,7 +19,18 @@ function getHumanChoice() {
     } else {
         alert(`Please enter ${options}`);
     }
+    return choice;
 }
-getHumanChoice();
+
 let humanScore = 0;
 let computerSore = 0;
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log(`It's a draw. No one wins.`)
+    }
+}
+
+playRound(humanSelection, computerSelection);
