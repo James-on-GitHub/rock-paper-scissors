@@ -9,20 +9,21 @@ function getComputerChoice() {
 // Human choice: return user input.
 function getHumanChoice() {
     let options = "Rock, Paper or Scissors."
-    let choice = prompt("Type Rock, Paper or Scissors:");
-    if (choice === "Rock") {
-        console.log(`You chose ${choice}.`);
+    let userInput = prompt("Type Rock, Paper or Scissors:");
+    userInput = userInput.toLowerCase().split(" ").map(userInput => userInput[0].toUpperCase() + userInput.slice(1)).join(" ");
+    if (userInput === "Rock") {
+        console.log(`You chose ${userInput}.`);
     } 
-    else if (choice === "Paper") {
-        console.log(`You chose ${choice}.`);
+    else if (userInput === "Paper") {
+        console.log(`You chose ${userInput}.`);
     } 
-    else if (choice === "Scissors") {
-        console.log(`You chose ${choice}.`);
+    else if (userInput === "Scissors") {
+        console.log(`You chose ${userInput}.`);
     } 
     else {
         alert(`Please enter ${options}`);
     }
-    return choice;
+    return userInput;
 }
 
 let humanScore = 0;
