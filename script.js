@@ -6,7 +6,7 @@ function getComputerChoice() {
     return compChoice;
 }
 
-// Human choice: return user input.
+// Human choice: return users, case in-sensitive, input. User is only allowed to enter the available options.
 function getHumanChoice() {
     let options = "Rock, Paper or Scissors."
     let userInput = prompt("Type Rock, Paper or Scissors:");
@@ -26,12 +26,16 @@ function getHumanChoice() {
     return userInput;
 }
 
+// Score variables to keep track of players scores.
 let humanScore = 0;
 let computerScore = 0;
+
+// Players choice variables.
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 const dualSelection = humanSelection && computerSelection;
 
+// Play a round: returns both players choices, declares a winner or loser and shows the adjusted score.
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! You both chose ${dualSelection}.`);
