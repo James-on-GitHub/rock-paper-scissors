@@ -1,9 +1,9 @@
 // Computers choice: will randomly return one of the array items when called.
 function getComputerChoice() {
     let options = ["Rock", "Paper", "Scissors"];
-    let choice = options[Math.floor(Math.random() * options.length)];
-    console.log(`The computer chose ${choice}.`);
-    return choice;
+    let compChoice = options[Math.floor(Math.random() * options.length)];
+    console.log(`The computer chose ${compChoice}.`);
+    return compChoice;
 }
 
 // Human choice: return user input.
