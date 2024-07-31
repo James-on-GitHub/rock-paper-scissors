@@ -6,13 +6,14 @@ function getComputerChoice() {
 }
 
 function displayComputerChoice() {
-  console.log(`The computer chose ${getComputerChoice()}.`);
+  let getComChoice = getComputerChoice();
+  console.log(`The computer chose ${getComChoice}.`);
 }
 
-function getHumanChoice() {
+function getHumanChoice(computerChoice) {
   let humanInput = prompt(`Please type ${playerChoice}`);
   humanInput
-    ? makeTitleCase(humanInput)
+    ? makeTitleCase(humanInput) + computerChoice()
     : alert(`Nothing was entered. Please enter ${playerChoice}`);
 }
 
@@ -42,7 +43,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 // Players choice variables.
-const humanSelection = getHumanChoice();
+const humanSelection = getHumanChoice(displayComputerChoice);
 const computerSelection = getComputerChoice();
 const dualSelection = humanSelection && computerSelection;
 
