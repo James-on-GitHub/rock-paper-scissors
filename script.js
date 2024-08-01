@@ -3,12 +3,13 @@ const game = { options: ["Rock", "Paper", "Scissors"] };
 const playerOptions = `${game.options[0]}, ${game.options[1]} or ${game.options[2]}`;
 
 function getComputerChoice() {
-  return game.options[Math.floor(Math.random() * game.options.length)];
+  let computerChoice =
+    game.options[Math.floor(Math.random() * game.options.length)];
+  displayComputerChoice(computerChoice);
 }
 
-function displayComputerChoice() {
-  let getComChoice = getComputerChoice();
-  console.log(`The computer chose ${getComChoice}.`);
+function displayComputerChoice(Choice) {
+  console.log(`The computer chose ${Choice}.`);
 }
 
 function getHumanChoice(computerChoice) {
@@ -44,8 +45,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 // Players choice variables.
-const humanSelection = getHumanChoice(displayComputerChoice);
-const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice(getComputerChoice);
+//const computerSelection = getComputerChoice();
 const dualSelection = humanSelection && computerSelection;
 
 // Play a round: returns both players choices, declares a winner or loser and shows the adjusted score.
@@ -87,4 +88,4 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-playRound(humanSelection, computerSelection);
+//playRound(humanSelection, computerSelection);
