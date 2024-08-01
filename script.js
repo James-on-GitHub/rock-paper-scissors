@@ -47,16 +47,51 @@ function displayHumanChoice(choice) {
   }
 }
 
+function getRoundResults() {
+  let humanWins = `You win! ${playerSelections.human} beats ${playerSelections.computer}.`;
+  let computerWins = `You lose! ${playerSelections.computer} beats ${playerSelections.human}.`;
+  let draw = `It's a draw! You both chose ${playerSelections.human}.`;
+  if (playerSelections.human === playerSelections.computer) {
+    console.log(draw);
+  } else if (
+    playerSelections.human === "Rock" &&
+    playerSelections.computer === "Paper"
+  ) {
+    console.log(computerWins);
+  } else if (
+    playerSelections.human === "Rock" &&
+    playerSelections.computer === "Scissors"
+  ) {
+    console.log(humanWins);
+  } else if (
+    playerSelections.human === "Paper" &&
+    playerSelections.computer === "Rock"
+  ) {
+    console.log(humanWins);
+  } else if (
+    playerSelections.human === "Paper" &&
+    playerSelections.computer === "Scissors"
+  ) {
+    console.log(computerWins);
+  } else if (
+    playerSelections.human === "Scissors" &&
+    playerSelections.computer === "Rock"
+  ) {
+    console.log(computerWins);
+  } else if (
+    playerSelections.human === "Scissors" &&
+    playerSelections.computer === "Paper"
+  ) {
+    console.log(humanWins);
+  }
+}
+
 getHumanChoice();
+getRoundResults();
 
 // Score variables to keep track of players scores.
 let humanScore = 0;
 let computerScore = 0;
-
-// Players choice variables.
-//const humanSelection =
-//const computerSelection = getComputerChoice();
-//const dualSelection = humanSelection && computerSelection;
 
 // Play a round: returns both players choices, declares a winner or loser and shows the adjusted score.
 /*function playRound(humanChoice, computerChoice) {
