@@ -7,21 +7,10 @@ const playerSelections = {
   computer: "",
 };
 
-function getComputerChoice() {
-  let computerChoice =
-    playerOptions[Math.floor(Math.random() * playerOptions.length)];
-  displayComputerChoice(computerChoice);
-  playerSelections.computer = computerChoice;
-}
-
-function displayComputerChoice(computerChoice) {
-  console.log(`The computer chose ${computerChoice}.`);
-}
-
 function getHumanChoice() {
   let humanChoice = prompt(`Please type ${chooseOption}`);
   humanChoice
-    ? makeTitleCase(humanChoice)
+    ? makeTitleCase(humanChoice) + getRoundWinner()
     : alert(`Nothing was entered. Please enter ${chooseOption}`);
 }
 
@@ -45,6 +34,17 @@ function displayHumanChoice(choice) {
   } else {
     alert(`Please enter ${chooseOption} only.`);
   }
+}
+
+function getComputerChoice() {
+  let computerChoice =
+    playerOptions[Math.floor(Math.random() * playerOptions.length)];
+  displayComputerChoice(computerChoice);
+  playerSelections.computer = computerChoice;
+}
+
+function displayComputerChoice(computerChoice) {
+  console.log(`The computer chose ${computerChoice}.`);
 }
 
 function getRoundWinner() {
@@ -87,7 +87,6 @@ function getRoundWinner() {
 }
 
 getHumanChoice();
-getRoundWinner();
 
 // Score variables to keep track of players scores.
 let humanScore = 0;
