@@ -48,43 +48,28 @@ function displayComputerChoice(computerChoice) {
 }
 
 function getRoundWinner() {
-  let humanWins = `You win! ${playerSelections.human} beats ${playerSelections.computer}.`;
-  let computerWins = `The computer wins! ${playerSelections.computer} beats ${playerSelections.human}.`;
-  let draw = `It's a draw! You both chose ${playerSelections.human}.`;
-  if (playerSelections.human === playerSelections.computer) {
+  let { human, computer } = playerSelections;
+  let humanWins = `You win! ${human} beats ${computer}.`;
+  let computerWins = `The computer wins! ${computer} beats ${human}.`;
+  let draw = `It's a draw! You both chose ${human}.`;
+  if (human === computer) {
     console.log(draw);
-  } else if (
-    playerSelections.human === "Rock" &&
-    playerSelections.computer === "Paper"
-  ) {
+  } else if (human === "Rock" && computer === "Paper") {
     console.log(computerWins);
-  } else if (
-    playerSelections.human === "Rock" &&
-    playerSelections.computer === "Scissors"
-  ) {
+  } else if (human === "Rock" && computer === "Scissors") {
     console.log(humanWins);
-  } else if (
-    playerSelections.human === "Paper" &&
-    playerSelections.computer === "Rock"
-  ) {
+  } else if (human === "Paper" && computer === "Rock") {
     console.log(humanWins);
-  } else if (
-    playerSelections.human === "Paper" &&
-    playerSelections.computer === "Scissors"
-  ) {
+  } else if (human === "Paper" && computer === "Scissors") {
     console.log(computerWins);
-  } else if (
-    playerSelections.human === "Scissors" &&
-    playerSelections.computer === "Rock"
-  ) {
+  } else if (human === "Scissors" && computer === "Rock") {
     console.log(computerWins);
-  } else if (
-    playerSelections.human === "Scissors" &&
-    playerSelections.computer === "Paper"
-  ) {
+  } else if (human === "Scissors" && computer === "Paper") {
     console.log(humanWins);
   }
 }
+
+function getPlayerScores() {}
 
 getHumanChoice();
 
