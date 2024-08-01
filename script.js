@@ -1,6 +1,6 @@
-const game = { options: ["Rock", "Paper", "Scissors"] };
+const playerOptions = ["Rock", "Paper", "Scissors"];
 
-const playerOptions = `${game.options[0]}, ${game.options[1]} or ${game.options[2]}`;
+const chooseOption = `${playerOptions[0]}, ${playerOptions[1]} or ${playerOptions[2]}`;
 
 const playerSelections = {
   human: "",
@@ -9,7 +9,7 @@ const playerSelections = {
 
 function getComputerChoice() {
   let computerChoice =
-    game.options[Math.floor(Math.random() * game.options.length)];
+    playerOptions[Math.floor(Math.random() * playerOptions.length)];
   displayComputerChoice(computerChoice);
   playerSelections.computer = computerChoice;
 }
@@ -19,10 +19,10 @@ function displayComputerChoice(computerChoice) {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt(`Please type ${playerOptions}`);
+  let humanChoice = prompt(`Please type ${chooseOption}`);
   humanChoice
     ? makeTitleCase(humanChoice)
-    : alert(`Nothing was entered. Please enter ${playerOptions}`);
+    : alert(`Nothing was entered. Please enter ${chooseOption}`);
 }
 
 function makeTitleCase(humanChoice) {
@@ -43,7 +43,7 @@ function displayHumanChoice(choice) {
   } else if (choice === "Scissors") {
     console.log(humanChoice) + getComputerChoice();
   } else {
-    alert(`Please enter ${playerOptions} only.`);
+    alert(`Please enter ${chooseOption} only.`);
   }
 }
 
@@ -87,7 +87,7 @@ function getRoundWinner() {
 }
 
 getHumanChoice();
-getRoundResults();
+getRoundWinner();
 
 // Score variables to keep track of players scores.
 let humanScore = 0;
