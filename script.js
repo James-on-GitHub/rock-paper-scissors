@@ -47,9 +47,9 @@ function displayHumanChoice(choice) {
   }
 }
 
-function getRoundResults() {
+function getRoundWinner() {
   let humanWins = `You win! ${playerSelections.human} beats ${playerSelections.computer}.`;
-  let computerWins = `You lose! ${playerSelections.computer} beats ${playerSelections.human}.`;
+  let computerWins = `The computer wins! ${playerSelections.computer} beats ${playerSelections.human}.`;
   let draw = `It's a draw! You both chose ${playerSelections.human}.`;
   if (playerSelections.human === playerSelections.computer) {
     console.log(draw);
