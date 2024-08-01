@@ -8,14 +8,14 @@ function getComputerChoice() {
   displayComputerChoice(computerChoice);
 }
 
-function displayComputerChoice(Choice) {
-  console.log(`The computer chose ${Choice}.`);
+function displayComputerChoice(computerChoice) {
+  console.log(`The computer chose ${computerChoice}.`);
 }
 
-function getHumanChoice(computerChoice) {
-  let humanInput = prompt(`Please type ${playerOptions}`);
-  humanInput
-    ? makeTitleCase(humanInput) + computerChoice()
+function getHumanChoice() {
+  let humanChoice = prompt(`Please type ${playerOptions}`);
+  humanChoice
+    ? makeTitleCase(humanChoice)
     : alert(`Nothing was entered. Please enter ${playerOptions}`);
 }
 
@@ -27,14 +27,14 @@ function makeTitleCase(humanChoice) {
   displayHumanChoice(titleCase);
 }
 
-function displayHumanChoice(humanChoice) {
-  let choice = `You chose ${humanChoice}.`;
-  if (humanChoice === "Rock") {
-    console.log(choice);
-  } else if (humanChoice === "Paper") {
-    console.log(choice);
-  } else if (humanChoice === "Scissors") {
-    console.log(choice);
+function displayHumanChoice(choice) {
+  let humanChoice = `You chose ${choice}.`;
+  if (choice === "Rock") {
+    console.log(humanChoice) + getComputerChoice();
+  } else if (choice === "Paper") {
+    console.log(humanChoice) + getComputerChoice();
+  } else if (choice === "Scissors") {
+    console.log(humanChoice) + getComputerChoice();
   } else {
     alert(`Please enter ${playerOptions} only.`);
   }
@@ -45,12 +45,12 @@ let humanScore = 0;
 let computerScore = 0;
 
 // Players choice variables.
-const humanSelection = getHumanChoice(getComputerChoice);
+const humanSelection = getHumanChoice();
 //const computerSelection = getComputerChoice();
-const dualSelection = humanSelection && computerSelection;
+//const dualSelection = humanSelection && computerSelection;
 
 // Play a round: returns both players choices, declares a winner or loser and shows the adjusted score.
-function playRound(humanChoice, computerChoice) {
+/*function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     console.log(`It's a draw! You both chose ${dualSelection}.`);
     console.log(`You're score is ${humanScore}.`);
@@ -86,6 +86,6 @@ function playRound(humanChoice, computerChoice) {
     console.log(`You're score is ${humanScore}.`);
     console.log(`The computers score is ${computerScore}.`);
   }
-}
+}*/
 
 //playRound(humanSelection, computerSelection);
