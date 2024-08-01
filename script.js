@@ -2,10 +2,16 @@ const game = { options: ["Rock", "Paper", "Scissors"] };
 
 const playerOptions = `${game.options[0]}, ${game.options[1]} or ${game.options[2]}`;
 
+const playerSelections = {
+  human: "",
+  computer: "",
+};
+
 function getComputerChoice() {
   let computerChoice =
     game.options[Math.floor(Math.random() * game.options.length)];
   displayComputerChoice(computerChoice);
+  playerSelections.computer = computerChoice;
 }
 
 function displayComputerChoice(computerChoice) {
@@ -25,6 +31,7 @@ function makeTitleCase(humanChoice) {
     .map((array) => array[0].toUpperCase() + array.slice(1))
     .join();
   displayHumanChoice(titleCase);
+  playerSelections.human = titleCase;
 }
 
 function displayHumanChoice(choice) {
@@ -40,12 +47,14 @@ function displayHumanChoice(choice) {
   }
 }
 
+getHumanChoice();
+
 // Score variables to keep track of players scores.
 let humanScore = 0;
 let computerScore = 0;
 
 // Players choice variables.
-const humanSelection = getHumanChoice();
+//const humanSelection =
 //const computerSelection = getComputerChoice();
 //const dualSelection = humanSelection && computerSelection;
 
