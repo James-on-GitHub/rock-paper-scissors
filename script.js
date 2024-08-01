@@ -1,8 +1,9 @@
-const playerOptions = ["Rock", "Paper", "Scissors"];
-const playerChoice = `${playerOptions[0]}, ${playerOptions[1]} or ${playerOptions[2]}`;
+const game = { options: ["Rock", "Paper", "Scissors"] };
+
+const playerOptions = `${game.options[0]}, ${game.options[1]} or ${game.options[2]}`;
 
 function getComputerChoice() {
-  return playerOptions[Math.floor(Math.random() * playerOptions.length)];
+  return game.options[Math.floor(Math.random() * game.options.length)];
 }
 
 function displayComputerChoice() {
@@ -11,10 +12,10 @@ function displayComputerChoice() {
 }
 
 function getHumanChoice(computerChoice) {
-  let humanInput = prompt(`Please type ${playerChoice}`);
+  let humanInput = prompt(`Please type ${playerOptions}`);
   humanInput
     ? makeTitleCase(humanInput) + computerChoice()
-    : alert(`Nothing was entered. Please enter ${playerChoice}`);
+    : alert(`Nothing was entered. Please enter ${playerOptions}`);
 }
 
 function makeTitleCase(humanChoice) {
@@ -34,7 +35,7 @@ function displayHumanChoice(humanChoice) {
   } else if (humanChoice === "Scissors") {
     console.log(choice);
   } else {
-    alert(`Please enter ${playerChoice} only.`);
+    alert(`Please enter ${playerOptions} only.`);
   }
 }
 
