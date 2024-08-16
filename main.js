@@ -1,3 +1,5 @@
+const sayHi = import("./js_modules/function-module.js");
+
 const playerOptions = ["Rock", "Paper", "Scissors"];
 
 const chooseOption = `${playerOptions[0]}, ${playerOptions[1]} or ${playerOptions[2]}`;
