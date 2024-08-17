@@ -4,7 +4,6 @@ const playerSelections = {
   human: "",
   computer: "",
 };
-
 export default playerSelections;
 
 getHumanChoice();
