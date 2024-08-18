@@ -21,13 +21,13 @@ const chooseOption = "Rock, Paper or Scissors.";
 
 export default function getHumanChoice() {
   rock.addEventListener("click", () => {
-    displayHumanChoice("Rock");
+    displayHumanChoice("Rock") + getRoundWinner();
   });
   paper.addEventListener("click", () => {
-    displayHumanChoice("Paper");
+    displayHumanChoice("Paper") + getRoundWinner();
   });
   scissors.addEventListener("click", () => {
-    displayHumanChoice("Scissors");
+    displayHumanChoice("Scissors") + getRoundWinner();
   });
 }
 
@@ -37,6 +37,7 @@ function displayHumanChoice(choice) {
   humanChoice.classList.add("human-choice");
   humanChoice.textContent = `You choose ${choice}`;
   optionsContainer.appendChild(humanChoice) + getComputerChoice();
+  playerSelections.human = choice;
 }
 
 /*export function makeTitleCase(humanChoice) {
