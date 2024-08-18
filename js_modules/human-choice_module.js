@@ -5,7 +5,9 @@ import playerSelections from "../main.js";
 import getComputerChoice from "./computer-choice_module.js";
 
 const rock = document.querySelector(".rock");
+
 const paper = document.querySelector(".paper");
+
 const scissors = document.querySelector(".scissors");
 
 const chooseOption = "Rock, Paper or Scissors.";
@@ -29,6 +31,14 @@ export default function getHumanChoice() {
   });
 }
 
+function displayHumanChoice(choice) {
+  const optionsContainer = document.querySelector("#options-container");
+  const humanChoice = document.createElement("div");
+  humanChoice.classList.add("human-choice");
+  humanChoice.textContent = `You choose ${choice}`;
+  optionsContainer.appendChild(humanChoice);
+}
+
 /*export function makeTitleCase(humanChoice) {
   let array = humanChoice.toLowerCase().split();
   let titleCase = array
@@ -38,7 +48,7 @@ export default function getHumanChoice() {
   playerSelections.human = titleCase;
 }*/
 
-function displayHumanChoice(choice) {
+/*function displayHumanChoice(choice) {
   let humanChoice = `You chose ${choice}.`;
   if (choice === "Rock") {
     console.log(humanChoice) + getComputerChoice();
@@ -49,4 +59,4 @@ function displayHumanChoice(choice) {
   } else {
     alert(`Please enter ${chooseOption} only.`);
   }
-}
+}*/
