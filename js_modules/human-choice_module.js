@@ -36,7 +36,7 @@ function displayHumanChoice(choice) {
   const humanChoice = document.createElement("div");
   humanChoice.classList.add("human-choice");
   humanChoice.textContent = `You choose ${choice}`;
-  optionsContainer.appendChild(humanChoice);
+  optionsContainer.appendChild(humanChoice) + getComputerChoice();
 }
 
 /*export function makeTitleCase(humanChoice) {
