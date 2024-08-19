@@ -3,7 +3,7 @@ import playerSelections from "../main.js";
 export default function getRoundWinner() {
   const { human, computer } = playerSelections;
 
-  const humanWins = `You win ${human} beats ${computer}.`;
+  const humanWins = `You win! ${human} beats ${computer}.`;
   const computerWins = ` The computer wins! ${computer} beats ${human}.`;
   const draw = `It's a draw! You both chose ${human}.`;
 
