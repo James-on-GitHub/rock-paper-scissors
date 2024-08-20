@@ -1,4 +1,4 @@
-import getRoundWinner from "./round-winner_module.js";
+import getRoundWinner from "./round-results_module.js";
 
 import playerSelections from "../main.js";
 
