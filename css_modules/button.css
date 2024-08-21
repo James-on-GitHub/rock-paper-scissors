@@ -1,0 +1,16 @@
+button {
+  font-size: 6rem;
+  border-radius: 100%;
+  padding: 2rem;
+  border: 0.5rem solid black;
+  background-color: hsl(240, 100%, 30%);
+  box-shadow: 0.5rem 0.5rem 1rem hsl(240, 100%, 30%);
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(240, 100%, 50%);
+  font-size: 8rem;
+  border: 1rem solid hsl(0, 0%, 14%);
+  padding: 1rem;
+  box-shadow: none;
+}
