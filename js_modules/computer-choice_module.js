@@ -11,6 +11,6 @@ function displayComputerChoice(choice) {
   const resultsContainer = document.querySelector("#results-container");
   const computerChoice = document.createElement("div");
   computerChoice.classList.add("computer-choice");
-  computerChoice.textContent = `The computer chose ${choice}`;
+  computerChoice.textContent = `The computer chose ${choice}.`;
   resultsContainer.appendChild(computerChoice);
 }

@@ -26,7 +26,7 @@ function displayHumanChoice(choice) {
   const resultsContainer = document.querySelector("#results-container");
   const humanChoice = document.createElement("div");
   humanChoice.classList.add("human-choice");
-  humanChoice.textContent = `You chose ${choice}`;
+  humanChoice.textContent = `You chose ${choice}.`;
   resultsContainer.appendChild(humanChoice) + getComputerChoice();
   playerSelections.human = choice;
 }
