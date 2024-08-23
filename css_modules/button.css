@@ -15,7 +15,13 @@ button:hover {
   box-shadow: none;
 }
 
-@media (max-width: 500px) {
+#options-container {
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 750px) {
   button {
     font-size: 2rem;
   }
