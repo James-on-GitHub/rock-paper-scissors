@@ -23,10 +23,10 @@ export default function getHumanChoice() {
 }
 
 function displayHumanChoice(choice) {
-  const optionsContainer = document.querySelector("#options-container");
+  const resultsContainer = document.querySelector("#results-container");
   const humanChoice = document.createElement("div");
   humanChoice.classList.add("human-choice");
   humanChoice.textContent = `You chose ${choice}`;
-  optionsContainer.appendChild(humanChoice) + getComputerChoice();
+  resultsContainer.appendChild(humanChoice) + getComputerChoice();
   playerSelections.human = choice;
 }

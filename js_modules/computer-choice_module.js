@@ -8,9 +8,9 @@ export default function getComputerChoice() {
 }
 
 function displayComputerChoice(choice) {
-  const optionsContainer = document.querySelector("#options-container");
+  const resultsContainer = document.querySelector("#results-container");
   const computerChoice = document.createElement("div");
   computerChoice.classList.add("computer-choice");
   computerChoice.textContent = `The computer chose ${choice}`;
-  optionsContainer.appendChild(computerChoice);
+  resultsContainer.appendChild(computerChoice);
 }
