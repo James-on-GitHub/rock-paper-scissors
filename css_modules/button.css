@@ -10,7 +10,16 @@ button:hover {
   cursor: pointer;
   background-color: hsl(240, 100%, 50%);
   font-size: 8rem;
-  border: 1rem solid hsl(0, 0%, 14%);
+  border: 0.5rem solid hsl(0, 0%, 14%);
   padding: 1rem;
   box-shadow: none;
+}
+
+@media (max-width: 500px) {
+  button {
+    font-size: 2rem;
+  }
+  button:hover {
+    font-size: 4rem;
+  }
 }
