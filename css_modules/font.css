@@ -1,7 +1,6 @@
 .font {
     font-family:Arial, Helvetica, sans-serif;
     color: hsl(0, 0%, 14%);
-    border: 1rem solid black;
     min-width: 100svw;
     display: flex;
     justify-content: center;
