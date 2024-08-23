@@ -30,7 +30,7 @@ button:hover {
   button:hover {
     font-size: 4rem;
     padding: 0.1rem;
-    border: 0.5rem solid black;
+    border: 0.5rem solid hsl(0, 0%, 14%);
   }
 }
 
@@ -42,6 +42,6 @@ button:hover {
   }
   button:hover {
     font-size: 3rem;
-    border: 0.3rem solid black;
+    border: 0.3rem solid hsl(0, 0%, 14%);
   }
 }
