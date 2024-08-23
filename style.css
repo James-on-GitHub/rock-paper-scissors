@@ -16,14 +16,20 @@ html {
 
 body {
   background-color: orange;
+  
 }
 
 #main-container {
+  min-height: 100svh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap:2rem;
 }
+
+
 
 
 
