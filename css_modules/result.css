@@ -11,7 +11,8 @@
 
 .round-winner,
 .human-wins-game,
-.computer-wins-game {
+.computer-wins-game,
+.game-is-draw {
     color: hsl(0, 100%, 50%);
 }
 

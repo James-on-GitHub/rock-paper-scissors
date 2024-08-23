@@ -73,6 +73,7 @@ function getGameWinner({ humanScore, computerScore }) {
   const lineBreak = document.createElement("br");
   const human = `You win the game! With a high score of: ${humanScore}!`;
   const computer = `The computer wins the game! With a high score of: ${computerScore}!`;
+  const gameDraw = `Game is a draw!`;
 
   if (humanScore < computerScore) {
     gameWinner.classList.add("computer-wins-game");
@@ -81,6 +82,10 @@ function getGameWinner({ humanScore, computerScore }) {
   } else if (humanScore > computerScore) {
     gameWinner.classList.add("human-wins-game");
     gameWinner.textContent = human;
+    resultsContainer.appendChild(gameWinner);
+  } else {
+    gameWinner.classList.add("game-is-draw")
+    gameWinner.textContent = gameDraw;
     resultsContainer.appendChild(gameWinner);
   }
 
