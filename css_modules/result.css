@@ -1,23 +1,29 @@
 #results-container {
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
-    color: hsl(0, 0%, 14%);
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: hsl(0, 0%, 14%);
 }
 
 .round-winner,
 .human-wins-game,
 .computer-wins-game,
 .game-is-draw {
-    color: hsl(0, 100%, 50%);
+  color: hsl(0, 100%, 50%);
 }
 
 @media (max-width: 850px) {
-    #results-container {
-        font-size: 1rem;
-    }
+  #results-container {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #results-container {
+    font-size: 0.6rem;
+  }
 }
