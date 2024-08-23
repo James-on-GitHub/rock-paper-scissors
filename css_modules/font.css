@@ -1,0 +1,26 @@
+.font {
+    font-family:Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 14%);
+    border: 1rem solid black;
+    min-width: 100svw;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+@media (max-width: 850px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
