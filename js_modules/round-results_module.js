@@ -19,43 +19,36 @@ export default function getRoundWinner() {
     roundWinner.textContent = draw;
     resultsContainer.appendChild(roundWinner);
     getPlayerScores(playerScores);
-    getGameWinner(playerScores);
   } else if (human === "Rock" && computer === "Paper") {
     roundWinner.textContent = computerWins;
     resultsContainer.appendChild(roundWinner);
     playerScores.computerScore++;
     getPlayerScores(playerScores);
-    getGameWinner(playerScores);
   } else if (human === "Rock" && computer === "Scissors") {
     roundWinner.textContent = humanWins;
     resultsContainer.appendChild(roundWinner);
     playerScores.humanScore++;
     getPlayerScores(playerScores);
-    getGameWinner(playerScores);
   } else if (human === "Paper" && computer === "Rock") {
     roundWinner.textContent = humanWins;
     resultsContainer.appendChild(roundWinner);
     playerScores.humanScore++;
     getPlayerScores(playerScores);
-    getGameWinner(playerScores);
   } else if (human === "Paper" && computer === "Scissors") {
     roundWinner.textContent = computerWins;
     resultsContainer.appendChild(roundWinner);
     playerScores.computerScore++;
     getPlayerScores(playerScores);
-    getGameWinner(playerScores);
   } else if (human === "Scissors" && computer === "Rock") {
     roundWinner.textContent = computerWins;
     resultsContainer.appendChild(roundWinner);
     playerScores.computerScore++;
     getPlayerScores(playerScores);
-    getGameWinner(playerScores);
   } else if (human === "Scissors" && computer === "Paper") {
     roundWinner.textContent = humanWins;
     resultsContainer.appendChild(roundWinner);
     playerScores.humanScore++;
     getPlayerScores(playerScores);
-    getGameWinner(playerScores);
   }
 }
 
@@ -65,6 +58,7 @@ function getPlayerScores({ humanScore, computerScore }) {
   scores.classList.add("scores");
   scores.textContent = `Your score is ${humanScore} and the computers score is ${computerScore}.`;
   resultsContainer.appendChild(scores);
+  getGameWinner(playerScores);
 }
 
 function getGameWinner({ humanScore, computerScore }) {
@@ -84,7 +78,7 @@ function getGameWinner({ humanScore, computerScore }) {
     gameWinner.textContent = human;
     resultsContainer.appendChild(gameWinner);
   } else {
-    gameWinner.classList.add("game-is-draw")
+    gameWinner.classList.add("game-is-draw");
     gameWinner.textContent = gameDraw;
     resultsContainer.appendChild(gameWinner);
   }
