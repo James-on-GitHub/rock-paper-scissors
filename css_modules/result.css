@@ -18,12 +18,12 @@
 
 @media (max-width: 850px) {
   #results-container {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 600px) {
   #results-container {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 }
