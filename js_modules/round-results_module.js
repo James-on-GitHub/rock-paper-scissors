@@ -59,11 +59,13 @@ export default function getRoundWinner() {
 function getPlayerScores({ humanScore, computerScore }) {
   const resultsContainer = document.querySelector("#results-container");
   const scores = document.createElement("div");
+  const lineBreak = document.createElement("br");
   scores.classList.add("scores");
   scores.textContent = `Your score is ${humanScore} and the computers score is ${computerScore}.`;
   resultsContainer.appendChild(scores);
+  resultsContainer.appendChild(lineBreak);
   printScoresCounter.printed++;
-  if (printScoresCounter.printed === 3) {
+  if (printScoresCounter.printed === 5) {
     getGameWinner(playerScores);
   }
 }
@@ -71,7 +73,7 @@ function getPlayerScores({ humanScore, computerScore }) {
 function getGameWinner({ humanScore, computerScore }) {
   const resultsContainer = document.querySelector("#results-container");
   const gameWinner = document.createElement("div");
-  const lineBreak = document.createElement("br");
+
   const human = `You win the game! With a high score of: ${humanScore}!`;
   const computer = `The computer wins the game! With a high score of: ${computerScore}!`;
   const gameDraw = `Game is a draw!`;
@@ -89,6 +91,4 @@ function getGameWinner({ humanScore, computerScore }) {
     gameWinner.textContent = gameDraw;
     resultsContainer.appendChild(gameWinner);
   }
-
-  resultsContainer.appendChild(lineBreak);
 }
