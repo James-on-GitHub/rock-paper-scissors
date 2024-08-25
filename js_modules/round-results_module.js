@@ -5,6 +5,10 @@ const playerScores = {
   computerScore: 0,
 };
 
+const printScoresCounter = {
+  printed: 0,
+};
+
 export default function getRoundWinner() {
   const { human, computer } = playerSelections;
   const humanWins = `You win! ${human} beats ${computer}.`;
@@ -58,7 +62,10 @@ function getPlayerScores({ humanScore, computerScore }) {
   scores.classList.add("scores");
   scores.textContent = `Your score is ${humanScore} and the computers score is ${computerScore}.`;
   resultsContainer.appendChild(scores);
-  getGameWinner(playerScores);
+  printScoresCounter.printed++;
+  if (printScoresCounter.printed === 3) {
+    getGameWinner(playerScores);
+  }
 }
 
 function getGameWinner({ humanScore, computerScore }) {
